@@ -1,18 +1,28 @@
-Setilab Student README - Kyle C. Hale 2014
+# Title
 
-GETTING STARTED: 
+In	this	lab,	you	will	tackle	a	greatly	simplified	and	constrained	version	of	this	computation,	with	the	goal	
+of	trying	to	make	your	computer execute	the	computation	as	fast	as	it	can. You	will	write	a	program	
+that,	given	a	raw	signal	from	a	broadband	receiver,	will	try	to	hunt	for signs	of	intelligence4 within	it,	
+specifically	some	kind	of	message.	
 
-To see how to use any of the provided utilities, run the program with no arguments (you can
-also typically use the -h flag)
 
-You first want to get a signal from the server:
+## Acceleration Method
 
-./siggen -n netid1-netid2 
+- **Using the	Intel/AMD	SSE or	AVX vector	instructions or	other	special	instructions**	to	get	
+parallelism	within	a	single	thread	of	execution.			Vector	instructions	operate	on	lots	of	data	at	
+once.		To	implement	this,	you	will	probably	need	to	learn	about	inline	assembly,	or	learn	how	to	
+get	a	compiler	like	icc	to	try	to	vectorize	your	code.
+- **Investigate	compiler	optimizations**,	including	those	that	are	specific	to	the	machine	you	are	
+running on.			See	if	the	compiler	can	improve	performance	for	you.			gcc	has	hundreds of	
+optimization	features	you	can	enable/disable	from	the	command	line.	 You	can	also	try	Intel’s	C	
+compiler,	icc.			icc is	likely	to	produce	much	faster	code given	the	right	options.		
+- **Parallelize	using	OpenMP.**			OpenMP	is	an extension	to	C/C++	and	other	languages	that	allows	
+shared	memory	parallelization	without	explicitly	creating	threads.			It	is	available	in	gcc	and	icc.			
+Read	about	OpenMP and	parallelize	the	sequential	code	in	band_scan.c using	it.			
+- **Loop unrolling**
+- **Remove branch**
 
-This will create several files for you. Some signals (named sig-N.bin, where N ranges from 0 to 
-however many signals we decide to give you) and secret. sig-N.bin files are your radio signal data. The secret file you 
-will use with the seti-eval and seti-handin scripts.
 
-To analyze signals, you will mostly be using the programs band_scan, amdemod, bin2wav, and analyze_signal.
+## Result
 
-Read the lab handout for further details on how to proceed from there.
+![avatar](scoreboard.PNG)
