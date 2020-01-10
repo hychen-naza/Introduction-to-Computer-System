@@ -26,3 +26,4 @@ Read	about	OpenMP and	parallelize	the	sequential	code	in	band_scan.c using	it.
 ## Result
 
 ![avatar](scoreboard.PNG)
+<http://murphy.wot.eecs.northwestern.edu/~cs213/setilab-dashboard.html>
