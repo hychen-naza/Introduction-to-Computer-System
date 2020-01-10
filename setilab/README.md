@@ -1,4 +1,4 @@
-## Title
+# Title
 
 In	this	lab,	you	will	tackle	a	greatly	simplified	and	constrained	version	of	this	computation,	with	the	goal	
 of	trying	to	make	your	computer execute	the	computation	as	fast	as	it	can. You	will	write	a	program	
@@ -6,7 +6,7 @@ that,	given	a	raw	signal	from	a	broadband	receiver,	will	try	to	hunt	for signs	o
 specifically	some	kind	of	message.	
 
 
-# Acceleration Method
+## Acceleration Method
 
 - **Using the	Intel/AMD	SSE or	AVX vector	instructions or	other	special	instructions**	to	get	
 parallelism	within	a	single	thread	of	execution.			Vector	instructions	operate	on	lots	of	data	at	
@@ -21,3 +21,8 @@ shared	memory	parallelization	without	explicitly	creating	threads.			It	is	avail
 Read	about	OpenMP and	parallelize	the	sequential	code	in	band_scan.c using	it.			
 - **Loop unrolling**
 - **Remove branch**
+
+
+## Result
+
+![avatar](scoreboard.PNG)
